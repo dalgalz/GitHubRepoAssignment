@@ -1,0 +1,130 @@
+body{
+  font-family: Arial;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.wrapper{
+  width: 980px;
+  margin: 0px auto;
+}
+
+.bodycontent{
+  background-color: purple;
+  background: radial-gradient(circle, #A391AD, #4F2C64, #240934); /* Standard syntax */
+  padding: 20px;
+  width: 100%;
+}
+
+.headerquote{
+  height: 80px;
+  background-color: white;
+}
+
+#myname{
+    width: 450px;
+    font-family: "Comic Sans MS";
+}
+
+#myquote{
+  text-align: right;
+  width: 485px;
+}
+
+#myname, #myquote{
+  padding: 10px;
+  display: inline-block;
+}
+
+.header_left{
+  width: 450px;
+  height: 295px;
+  display: inline-block;
+  padding: 5px;
+  margin-right: 20px;
+  background-color: #BCBABD;
+}
+
+.header_right{
+  width: 495px;
+  height: 305px;
+  display: inline-block;
+  background: linear-gradient(to right, #ffffff, #BAB1BF);
+  vertical-align: top;
+}
+
+.topic{
+  height: 25px;
+  background: linear-gradient(#D1C4D7, #9D96A1, #D1C4D7);
+  padding: 10px;
+  color: #EAE3F0;
+}
+
+h2, h3, p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.content{
+  height: 280px;
+  padding: 10px;
+}
+
+.techelements{
+  height: 170px;
+  padding-top: 10px;
+}
+
+.techelements img{
+  width: 45px;
+  height: 45px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.elements{
+  width: 310px;
+  background: linear-gradient(to right, #ffffff, #BAB1BF);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.elecenter{
+  margin: 0px 20px;
+}
+
+.main_content{
+  padding-top: 20px;
+}
+
+a{
+  color: black;
+}
+
+button{
+  background-color: #234F22;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 5px 5px 5px #888888;
+  color: white;
+}
+
+.button{
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.footer{
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.social img{
+  width: 20px;
+  height: 20px;
+}
