@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disappearing Star</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('img').click(function(){
+				$(this).attr("src","white.png");
+			});
+			$('button').click(function(){
+				$('img').attr("src", "star.png");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div>
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+			<img src="star.png" alt="star">
+		</div>
+		<button>Retore</button>
+	</div>
+</body>
+</html>
