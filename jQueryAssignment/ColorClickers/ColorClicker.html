@@ -18,17 +18,17 @@
           $(document).ready(function(){
              $('#large_box').click(function(){
                 //alert('you clicked the big box!');
-                $(this).css('background-color', '#ff99dd');
-                $(this).children().css('background-color', '#33cc33');
+                $(this).css('background-color', random_color());
+                $(this).children().css('background-color', random_color());
          //comment this out when you have figured out what event.stopPropagation is used for
              })
              $('.side_box').click(function(event){
                 event.stopPropagation();
-                $(this).siblings().css('background-color', '#ff9933');
+                $(this).siblings().css('background-color', random_color());
              })
              $('.middle_box').click(function(event){
                 event.stopPropagation();
-                $(this).parent().css('background-color', '#6699ff');
+                $(this).parent().css('background-color', random_color());
              })
           });
       </script>
