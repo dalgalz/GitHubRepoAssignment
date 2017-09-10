@@ -1,0 +1,15 @@
+#allpoke{
+	width: 800px;
+}
+
+#rightsection{
+	width: 250px;
+	height: 500px;
+	border: 30px solid red;
+	padding: 20px;
+}
+
+#allpoke, #rightsection{
+	display: inline-block;
+	vertical-align: top;
+}
