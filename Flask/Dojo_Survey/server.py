@@ -16,9 +16,6 @@ def create_user():
    lang = request.form['lang']
    comment = request.form['comment']
    # redirects back to the '/' route
-   return redirect('/result')
+   return render_template("result.html" , name=name, location=location, lang=lang, comment=comment)
 
-@app.route('/result')
-def result():
-  return render_template("result.html" , name=name, location=location, lang=lang, comment=comment)
 app.run(debug=True) # run our server
