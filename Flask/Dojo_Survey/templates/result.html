@@ -1,0 +1,18 @@
+<html>
+    <head>
+       <title>Result</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+      <div id="formSection">
+        <h3>Submitted Result</h3>
+            <p>Your Name: {{ name }}</p>
+            <br>
+            <p>Dojo Location: {{ location }}</p>
+            <br>
+            <p>Favorite Language: {{ lang }}</p>
+            <br>
+            <p>Comment (Optional): {{ comment }}</p>
+      </div>
+    </body>
+</html>
