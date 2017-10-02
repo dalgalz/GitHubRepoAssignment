@@ -15,7 +15,7 @@
 
 #logAct{
 	width: 1000px;
-	height: 500px;
+	height: 200px;
 	border: 5px solid black;
 	overflow-y: scroll;
 }

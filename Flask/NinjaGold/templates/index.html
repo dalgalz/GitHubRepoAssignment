@@ -41,7 +41,9 @@
 	<div>
 		<p id="activities:">Activities:</p>
 		<div id="logAct">
-		{{session['act']}}
+		    {% for a in session['act'] | reverse %}
+      			<p class="{{a['class']}}">{{a['activity']}} ( {{a['date']}} )</p>
+    		{% endfor %}
 		</div>
 	<div>
 </body>
