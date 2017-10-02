@@ -21,13 +21,18 @@ def guess_num():
 	print guessNum
 	print session['randNum']
 	if int(guessNum) < session['randNum']:
-		session['hint'] = "Too Low!!!"
+		session['hint'] = "low"
 	elif int(guessNum) > session['randNum']:
-		session['hint'] = "Too High!!!"
+		session['hint'] = "high"
 	elif int(guessNum) == session['randNum']:
-		session['correct'] = session['randNum'], "was the number!!!"
-		session.pop('randNum')
-		session.pop('hint')
+		session['hint'] = "correct"
   	return redirect('/')
+
+@app.route('/reset')
+def reset():
+    session.pop('randNum')
+    session.pop('hint')
+    return redirect('/')
+
 
 app.run(debug=True) # run our server

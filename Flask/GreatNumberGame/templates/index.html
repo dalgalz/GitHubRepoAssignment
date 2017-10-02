@@ -7,24 +7,23 @@
     <h1>Welcome to the Great Number Game!!</h1>
     <h3>I'm thinking of a number between 1 - 100</h3>
     <h3>Take a guess!!</h3>
-    <div id="hint" hidden>{{session['hint']}}</div>
-    <div id="correct" hidden>{{session['hint']}}
+    {% if session['hint'] == 'low' %}
+    <div id="hint">Too Low!!!</div>
+    {% elif session['hint'] == 'high' %}
+    <div id="hint">Too High!!!</div>
+    {% elif session['hint'] == 'correct' %}
+    <div id="correct">
+    <p>{{session['randNum']}}  was the Number!</p>
+    <a href="/reset"><button>Play Again</button></a>
+    </div>
+    {% endif %}
       <br>
       <br>
-      <br>
-      <form action='/guess' method='post'>
-        <input type="submit" name="submit" value="Play Again">
-      </form>
     </div>
     <form action='/guess' method='post'>
       <input type="text" name="guess">
       <br>
     	<input type="submit" name="submit" value="Submit">
     </form>
-    <script type="text/javascript">
-      if('<%session['hint']%>' != null){
-        document.getElementById('hint').show();
-      }
-    </script>
   </body>
 </html>
