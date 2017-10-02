@@ -1,0 +1,24 @@
+*{
+	margin: auto;
+	text-align: center;
+}
+
+#hint, #correct{
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	margin: 20px auto;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+#hint{
+	background-color: red;
+}
+
+#correct{
+	background-color: green;
+}
