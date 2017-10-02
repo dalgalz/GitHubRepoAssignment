@@ -5,6 +5,13 @@
     </head>
     <body>
       <div id="formSection">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
         <form action='/dojo' method='post'>
             Your Name: <input type='text' name='name'>
             <br>
