@@ -4,9 +4,6 @@
      <title>Ninja</title>
   </head>
   <body>
-    <img src="{{ url_for('ninja', filename='/images/Ninjas/leonardo.jpg') }}" alt="leonardo">
-    <img src="{{ url_for('ninja', filename='/images/Ninjas/michelangelo.jpg') }}" alt="michelangelo">
-    <img src="{{ url_for('ninja', filename='/images/Ninjas/raphael.jpg') }}" alt="raphael">
-    <img src="{{ url_for('/ninja', filename='/images/Ninjas/donatello.jpg') }}" alt="donatello">
+    <img src="{{ url_for('static', filename='images/Ninjas/'+character+'.jpg') }}" alt="{{character}}">
   </body> 
 </html>

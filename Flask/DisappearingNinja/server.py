@@ -6,8 +6,20 @@ app.secret_key = 'KeepItSecretKeepItSafe'
 def no_ninja():
   return render_template("nonin.html")
 
-@app.route('/ninja')
-def ninja():
-  return render_template("ninja.html")
+@app.route('/ninja/<color>')
+def show(color):
+    ninjas = {
+        'orange':'michelangelo',
+        'blue':'leonardo',
+        'red':'raphael',
+        'purple':'donatello'
+    }
+    
+    if color in ninjas:
+        character = ninjas[color]
+    else:
+        character = 'notapril'
+    return render_template('ninja.html', character=character)
+
 
 app.run(debug=True)
