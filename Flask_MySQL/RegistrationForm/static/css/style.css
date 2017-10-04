@@ -1,0 +1,9 @@
+.regislog{
+	border: 3px solid black;
+	width: 300px;
+	height: 250px;
+	padding: 20px;
+	margin: 20px;
+	vertical-align: top;
+	display: inline-block;
+}
