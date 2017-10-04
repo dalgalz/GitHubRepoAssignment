@@ -1,6 +1,8 @@
 #1. What query would you run to get all the customers inside city_id = 312?
 #Your query should return customer first name, last name, email, and address.
-
+select customer.first_name, customer.last_name, customer.email, address.address
+from customer join address on customer.address_id = address.address_id
+join city on city.city_id = address.city_id where city.city_id = 312;
 
 #2. What query would you run to get all comedy films?
 #Your query should return film title, description, release year, rating, special features, and genre (category).
