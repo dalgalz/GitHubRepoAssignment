@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Dojo Wall</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div id="header">
+		<h1 id="topic_head">Coding Dojo Wall</h1>
+		<div id="right_head">
+			<p>Welcome! {{ session["uname"] }}</p><a href="/logoff">Log off</a>
+		</div>
+	</div>
+	<div id="body_section">
+		<p>Post a Message</p>
+		<form action="/post_msg" method="post">
+			<textarea id="message_post" name="message_post"></textarea>
+			<br>
+			<input id="sub_msg" type="submit" value="Post a Message" name="sub_msg">
+		</form>
+		<div id="msg_section">
+			{% for msg in all_msg: %}
+			<div class="msg">
+				<h3>{{ msg['user_name'] }} {{ msg['message_date'] }}</h3>
+				<p>{{ msg['message'] }}</p>
+				<div class="comment_sec">
+					{% for comt in all_comt: %}
+						{% if msg['id'] == comt['message_id'] %}
+							<h3>{{ comt['user_name'] }} {{ comt['comment_date'] }}</h3>
+							<p>{{ comt['comment'] }}</p>
+						{% endif %}
+					{% endfor %}
+					<form action="/post_comt" method="post">
+						<textarea id="comment_post" name="comment_post"></textarea>
+						<input type="text" value="{{ msg['id'] }}" id="msg_id" name="msg_id" hidden>
+						<br>
+						<input id="sub_comt" type="submit" value="Post a Comment" name="sub_comt">
+					</form>
+				</div>
+			</div>
+			{% endfor %} 
+		</div>
+	</div>
+
+</body>
+</html>
